@@ -1,0 +1,8 @@
+.card_body {
+    margin: 75px auto;
+}
+
+.logout {
+    display: flex;
+    justify-content: flex-end;
+}

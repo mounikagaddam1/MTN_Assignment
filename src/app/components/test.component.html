@@ -1,0 +1,21 @@
+<div id="wrapper">
+
+    <div id="users-list">
+        <div id="list">
+            <div class="logout"><input type="button" value="Logout" (click)="navigateToLogin(logged[0].id)" /></div>
+            <!-- <ul>
+        <li *ngFor="let user of userslist | async">
+          <span >hi {{ user.email }}, welcome to IBM</span>
+        </li>
+      </ul> -->
+            <div>
+                <div class="card card_body">
+                    <div class="card-body" *ngFor="let user of userslist | async">
+                        <span>hi {{ user.email }}, welcome to IBM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
