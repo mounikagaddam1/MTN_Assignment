@@ -13,7 +13,7 @@ import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
    showadd = false;
-   isLogged;
+   isLogged =[];
    submitted : boolean = false;
    loginForm: FormGroup;
   userslist: Observable<Array<UserAdd>>;
