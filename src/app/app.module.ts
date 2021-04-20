@@ -4,24 +4,27 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-//importing the store
+// importing the store
 import { StoreModule } from '@ngrx/store';
 import { UserReducer } from './store/reducers';
 import { TestComponent } from './components/test.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { LoginComponent } from './components/login/login.component';
 @NgModule({
+
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    //Binding the store.The store contains only a single reducer
+    // Binding the store.The store contains only a single reducer
     StoreModule.forRoot({
       users : UserReducer
     }),
