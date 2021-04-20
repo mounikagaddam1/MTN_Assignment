@@ -16,11 +16,11 @@ export function UserReducer(state: Array<UserAdd> = initialState, action: UserAc
     }
     
 }
-export const getUserState = createFeatureSelector<UserAdd>('products');
+export const getUserState = createFeatureSelector<Array<UserAdd>>('users');
 debugger;
 export const getUsersState = createSelector(
   getUserState,
-  (state: UserAdd) => state
+  (state: Array<UserAdd>) => state['0']
   
 );
 
