@@ -14,14 +14,13 @@ export function UserReducer(state: Array<UserAdd> = initialState, action: UserAc
        default:
          return state;
     }
-    
+
 }
 export const getUserState = createFeatureSelector<Array<UserAdd>>('users');
-debugger;
 export const getUsersState = createSelector(
   getUserState,
   (state: Array<UserAdd>) => state['0']
-  
+
 );
 
 
