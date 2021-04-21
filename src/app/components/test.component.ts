@@ -18,7 +18,6 @@ export class TestComponent implements OnInit {
   constructor(private store: Store<AppState>, private route: Router) { }
 
   ngOnInit() {
-    debugger;
     this.userslist = this.store.select(getUsersState
     );
     this.userslist.subscribe(data => {
