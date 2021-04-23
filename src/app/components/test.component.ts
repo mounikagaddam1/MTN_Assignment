@@ -15,7 +15,7 @@ import { getUsersState } from '../store/reducers';
 export class TestComponent implements OnInit {
   userslist: Observable<any>;
   logged: any;
-  constructor(private store: Store<AppState>, private route: Router) { }
+  constructor(public store: Store<AppState>, private route: Router) { }
 
   ngOnInit() {
     this.userslist = this.store.select(getUsersState
