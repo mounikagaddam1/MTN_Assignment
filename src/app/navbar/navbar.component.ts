@@ -10,20 +10,20 @@ import { Observable } from 'rxjs';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit { 
-  @Output() public logOutClicked = new EventEmitter<String>();
+export class NavbarComponent implements OnInit {
+  @Output() public logOutClicked = new EventEmitter<any>();
   userslist: Observable<any>;
-  logged: any; 
+  logged: any;
   constructor(public store: Store<AppState>, private route: Router) { }
 
   ngOnInit(): void {
     this.userslist = this.store.select(getUsersState
       );
-      this.userslist.subscribe(data => {
+    this.userslist.subscribe(data => {
         this.logged = data;
       });
   }
   navigateToLogin() {
-    this.logOutClicked.emit()
+    this.logOutClicked.emit();
   }
 }

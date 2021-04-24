@@ -1,5 +1,5 @@
-
-<app-navbar (logOutClicked)="navigateToLogin()"></app-navbar>
+<app-navbar (logOutClicked)="navigateToLogin()">
+</app-navbar>
 <div id="wrapper">
 
     <!-- <div id="users-list">
@@ -17,9 +17,9 @@
     <div class="card" style="width: 18rem;margin: 2% auto;">
         <img class="card-img-top" src="../../assets/img/logo.png" alt="Card image cap">
         <div class="card-body userName">
-          <p class="card-title">Your logged in As</p>
-          <span class="card-userName"> {{ logged?.email }}</span>
+            <p class="card-title">Your logged in As</p>
+            <span class="card-userName"> {{ logged?.email }}</span>
         </div>
-      </div>
+    </div>
 
 </div>
