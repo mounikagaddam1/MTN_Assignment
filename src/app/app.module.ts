@@ -12,12 +12,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './components/login/login.component';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
 
   declarations: [
     AppComponent,
     TestComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

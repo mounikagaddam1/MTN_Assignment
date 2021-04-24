@@ -23,6 +23,7 @@ export class TestComponent implements OnInit {
     this.userslist.subscribe(data => {
       this.logged = data;
     });
+    console.log('logged',this.logged)
   }
 
   navigateToLogin(id) {
