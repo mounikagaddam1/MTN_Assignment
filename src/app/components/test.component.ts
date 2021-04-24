@@ -23,11 +23,11 @@ export class TestComponent implements OnInit {
     this.userslist.subscribe(data => {
       this.logged = data;
     });
-    console.log('logged',this.logged)
+    console.log('logged', this.logged);
   }
 
-  navigateToLogin(id) {
-    this.store.dispatch(new DeleteUserAction(id));
+  navigateToLogin() {
+    this.store.dispatch(new DeleteUserAction( this.logged.id));
     this.route.navigate(['']);
   }
 }
