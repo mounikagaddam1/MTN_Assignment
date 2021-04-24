@@ -1,0 +1,111 @@
+.logo-card {
+    /* height: 80px;
+      width: 80px;
+      z-index: 999;
+      background-color: #ffc300;
+      margin: 25px 0px 0px 131px; */
+    /* padding-top: 20px; */
+    /* border: 4px solid white;
+      border-radius: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center; */
+  
+    height: 80px;
+    width: 80px;
+    z-index: 999;
+    background-color: #ffc300;
+    margin: 0px 0px 0px 167px;
+    border: 4px solid white;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  
+  .nav-styling {
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .nav_headings {
+    display: flex;
+    justify-content: space-between;
+    /* max-width: 400px; */
+    /* margin: 0 auto; */
+    background: #A0C5E8;
+    padding: 10px 0;
+  }
+  
+  .nav_headings a{
+    width: 50px;
+    height: 50px;
+    background: black;
+    font-family: 'Work Sans';
+      font-weight: normal;
+  }
+  
+  .list_style{
+      list-style-type: none;
+  }
+  
+  .list_style a{
+      color: black;
+      font-family: work;
+      font-family: 'Work Sans';
+      font-weight: normal;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+      color: black;
+      padding-right: 20px;
+      padding-left: 20px;
+      font-size: 16px;
+  }
+  
+  
+  element.style {
+      font-size: 16px;
+  }
+  .navbar-light .navbar-nav .nav-link {
+      color: rgb(255, 255, 255);
+  }
+  @media (min-width: 992px){
+  .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 20px;
+      padding-left: 20px;
+  }
+  }
+  
+  .nav_style{
+      padding-left: 0px;
+  }
+  
+  .logo{
+    position: absolute;
+    width: 80px;
+      z-index: 999;
+      /* margin-top: 75px; */
+      margin-top: -13px;
+      margin-left: 20px;
+  }
+  
+  .navbar-item-names {
+    margin-left: 45px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .form-inline li{
+    padding: 0px;
+      margin: 0px 20px 0px 0px;
+  }
+  
+  

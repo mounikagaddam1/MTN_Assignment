@@ -1,8 +1,29 @@
 .card_body {
     margin: 75px auto;
-}
 
+}
+.userName{
+    background-image: linear-gradient(
+260deg
+, #2376ae 0%, #c16ecf 100%);
+}
 .logout {
     display: flex;
     justify-content: flex-end;
+}
+
+.card-userName{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.card-title{
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+
+.card{
+    box-shadow: -4px 4px 16px -1px rgba(184,184,184,1);
 }
