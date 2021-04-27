@@ -1,6 +1,8 @@
-
 Run `ng serve` for a dev server.
 Run `ng test` to execute the unit tests.
+
+WHAT TO IMPROVE: 
+
 we can do better validation for password field like minimum one capital letter and Special characters are mandatory.
 we can implement forgot and reset password functionalities.
 we can improve the UX design.
