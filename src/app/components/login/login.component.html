@@ -20,7 +20,7 @@
               Password required
           </small>
                 <small class="form-text text-muted" *ngIf="submitted && loginForm.controls.password.errors?.minlength">
-              Minimum 6 character need
+               6-20 characters needed
           </small>
                 <small class="form-text text-muted" *ngIf="submitted && loginForm.controls.password.errors?.maxlength">
               Maximum 16 character allowed

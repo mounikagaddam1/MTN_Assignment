@@ -87,14 +87,6 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
     expect(component.submitted).toEqual(true);
 });
-  it('navigating to test component', () => {
-  spyOn(route, 'navigate').and.stub();
-  component.loginForm.controls.email.setValue('ibm@gmail.com');
-  component.loginForm.controls.password.setValue('123456');
-  component.loginClick();
-  fixture.detectChanges();
-  expect(route.navigate).toHaveBeenCalledWith(['/Test']);
-});
   it('email error validation', () => {
   component.loginForm.controls.email.setValue('ibm');
   fixture.detectChanges();

@@ -13,6 +13,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import {UserEffects} from './store/user.effects';
+import { EffectsModule } from '@ngrx/effects';
 @NgModule({
 
   declarations: [
@@ -26,7 +28,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    // Binding the store.The store contains only a single reducer
+    EffectsModule.forRoot([UserEffects]),
     StoreModule.forRoot({
       users : UserReducer
     }),

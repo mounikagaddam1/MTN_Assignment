@@ -1,25 +1,26 @@
 import { UserAdd} from '../models/users.model';
-import {UserActions, UserActionTypes} from '../actions/users.action';
-import { createFeatureSelector, createSelector } from '@ngrx/store';
+import * as useraction from '../actions/users.action';
+import { createFeatureSelector, createReducer, createSelector, on } from '@ngrx/store';
+import { Action } from '@ngrx/store';
 
 // initial store data
-const initialState: Array<UserAdd> = [];
+const initialState: UserAdd = {email: '', password: '', id: ''};
 // The only reducer we are using for this example
-export function UserReducer(state: Array<UserAdd> = initialState, action: UserActions) {
-    switch (action.type) {
-      case UserActionTypes.ADD_USER :
-       return [...state, action.payload];
-      case UserActionTypes.DELETE_USER:
-        return state.filter(item => item.id !== action.payload);
-       default:
-         return state;
-    }
-
-}
-export const getUserState = createFeatureSelector<Array<UserAdd>>('users');
+export const UserReducer = createReducer(
+  initialState,
+  on(useraction.addUserSucess, useraction.logoutAction, (state, action) => {
+    return {
+        state,
+      email: action.data.email,
+      password: action.data.password,
+      id: action.data.id
+      };
+  }),
+);
+export const getUserState = createFeatureSelector<UserAdd>('users');
 export const getUsersState = createSelector(
   getUserState,
-  (state: Array<UserAdd>) => state['0']
+  (state: UserAdd) => state
 
 );
 

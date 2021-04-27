@@ -3,7 +3,7 @@ import { AppState } from '../store/models/app.model';
 import {UserAdd } from '../store/models/users.model';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { DeleteUserAction} from '../store/actions/users.action';
+import { logoutAction} from '../store/actions/users.action';
 import { Router } from '@angular/router';
 import { getUsersState } from '../store/reducers';
 
@@ -27,7 +27,13 @@ export class TestComponent implements OnInit {
   }
 
   navigateToLogin() {
-    this.store.dispatch(new DeleteUserAction( this.logged.id));
+    const object = {
+      email: '',
+      password: '',
+      id: ''
+    };
+    this.store.dispatch(logoutAction({data: object}));
+
     this.route.navigate(['']);
   }
 }
