@@ -2,9 +2,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Router } from '@angular/router';
 import { AppState } from '../store/models/app.model';
-import { DeleteUserAction} from '../store/actions/users.action';
 import { getUsersState } from '../store/reducers';
 import { Observable } from 'rxjs';
+import { logoutAction } from '../store/actions/users.action';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -24,6 +24,12 @@ export class NavbarComponent implements OnInit {
       });
   }
   navigateToLogin() {
-    this.logOutClicked.emit();
+    const object = {
+      email: '',
+      password: '',
+      id: ''
+    };
+    this.store.dispatch(logoutAction({data: object}));
+    this.route.navigate(['']);
   }
 }

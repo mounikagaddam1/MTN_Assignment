@@ -15,10 +15,10 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   showadd = false;
-   isLogged = [];
+   isLogged: any;
    submitted = false;
    loginForm: FormGroup;
-  userslist: Observable<Array<UserAdd>>;
+  userslist: Observable<UserAdd>;
   userinput = {
     email: '',
     password : '',
@@ -48,9 +48,9 @@ export class LoginComponent implements OnInit {
         password,
         id : uuid()
       };
-      this.store.dispatch(new AddUserAction(this.userinput));
+      this.submitted = true;
+      this.store.dispatch(AddUserAction({data: this.userinput}));
       this.loginForm.reset();
-      this.route.navigate(['/Test']);
     }
   }
 
