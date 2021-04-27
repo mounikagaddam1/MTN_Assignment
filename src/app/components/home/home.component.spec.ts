@@ -1,18 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TestComponent } from './test.component';
+import { HomeComponent } from './home.component';
 import {Router} from '@angular/router';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { StoreModule } from '@ngrx/store';
-import { UserReducer } from '../store/reducers';
+import { UserReducer } from '../../store/reducers';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AddUserAction, logoutAction } from '../store/actions/users.action';
-import { UserAdd } from '../store/models/users.model';
+import { AddUserAction, logoutAction } from '../../store/actions/users.action';
+import { UserAdd } from '../../store/models/users.model';
 import {Store} from '@ngrx/store';
-describe('TestComponent', () => {
-  let component: TestComponent;
-  let fixture: ComponentFixture<TestComponent>;
+describe('HomeComponent', () => {
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
   let route: Router;
   let store: Store;
   beforeEach(async(() => {
@@ -24,13 +24,13 @@ describe('TestComponent', () => {
             UserReducer
         ),
       ],
-      declarations: [ TestComponent ]
+      declarations: [ HomeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TestComponent);
+    fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
     route = TestBed.inject(Router);

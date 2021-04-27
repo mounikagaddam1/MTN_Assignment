@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 // importing the store
 import { StoreModule } from '@ngrx/store';
 import { UserReducer } from './store/reducers';
-import { TestComponent } from './components/test.component';
+import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
@@ -19,7 +19,7 @@ import { EffectsModule } from '@ngrx/effects';
 
   declarations: [
     AppComponent,
-    TestComponent,
+    HomeComponent,
     LoginComponent,
     NavbarComponent
   ],
