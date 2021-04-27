@@ -1,18 +1,18 @@
 import { Component , OnInit} from '@angular/core';
-import { AppState } from '../store/models/app.model';
-import {UserAdd } from '../store/models/users.model';
+import { AppState } from '../../store/models/app.model';
+import {UserAdd } from '../../store/models/users.model';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { logoutAction} from '../store/actions/users.action';
+import { logoutAction} from '../../store/actions/users.action';
 import { Router } from '@angular/router';
-import { getUsersState } from '../store/reducers';
+import { getUsersState } from '../../store/reducers';
 
 @Component({
-  selector: 'app-testcomponent',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  selector: 'app-homecomponent',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class TestComponent implements OnInit {
+export class HomeComponent implements OnInit {
   userslist: Observable<any>;
   logged: any;
   constructor(public store: Store<AppState>, private route: Router) { }
